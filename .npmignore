@@ -1,0 +1,12 @@
+__tests__
+*.log
+.git
+.gitignore
+.vscode
+coverage
+node_modules
+npm-debug.log*
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
