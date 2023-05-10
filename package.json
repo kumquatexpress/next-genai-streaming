@@ -1,0 +1,43 @@
+{
+  "name": "next-genai-streaming",
+  "version": "1.0.0",
+  "description": "Hooks and API helpers to stream generative AI APIs to nextJS applications",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "npm run clean && npm run build:src",
+    "clean": "rm -rf dist",
+    "build:src": "tsc",
+    "watch:src": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kumquatexpress/next-genai-streaming.git"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "nextjs",
+    "genai",
+    "stream",
+    "audio"
+  ],
+  "author": "Boyang Niu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kumquatexpress/next-genai-streaming/issues"
+  },
+  "homepage": "https://github.com/kumquatexpress/next-genai-streaming#readme",
+  "devDependencies": {
+    "@types/node": "^20.1.1",
+    "@types/react": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "eventsource-parser": "^1.0.0",
+    "openai": "^3.2.1"
+  }
+}
