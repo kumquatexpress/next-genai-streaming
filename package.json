@@ -1,6 +1,6 @@
 {
   "name": "next-genai-streaming",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Hooks and API helpers to stream generative AI APIs to nextJS applications",
   "main": "dist/index.js",
   "scripts": {

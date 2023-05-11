@@ -10,6 +10,7 @@ Use the library (visit `examples/` for more)
 ```
 import { withStream } from "next-genai-streaming";
 
+const Text = (props) => (<div>{props.content}</div>)
 export default withStream(Text, {
   request: YOUR_URL_ENDPOINT,
   options: { method: "GET" },
@@ -29,6 +30,7 @@ The library contains HOCs for both text and audio. `withMediaStream` wraps an `<
 ```
 import { withMediaStream} from "next-genai-streaming";
 
+const Media = (props) => (<audio {...props} />)
 withMediaStream(Media, {
   src: YOUR_URL_ENDPOINT,
   mimeType: "audio/webm",
@@ -38,7 +40,7 @@ withMediaStream(Media, {
 <br/>
 
 ## OpenAI API
-Included is an API helper for streaming OpenAI completions. Currently, the endpoint uses SSE on a POST request, which is not supported the native browser `EventSource`. Also, you'd have to expose your API key on the browser. Instead, you can use `OAIStreamingCompletion` to create a NextJS serverless endpoint and send that as a default ReadableStream instead.
+Included is an API helper for streaming OpenAI completions. Currently, the endpoint uses SSE on a POST request, which is not supported by the native browser `EventSource`. Also, you'd have to expose your API key on the browser. Instead, you can use `OAIStreamingCompletion` to create a NextJS serverless endpoint and send that as a default ReadableStream instead.
 
 Create the endpoint at `/pages/api` and plug directly into `withStream` - you'll be up and running immediately!
 
